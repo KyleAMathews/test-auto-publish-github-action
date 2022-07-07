@@ -1,0 +1,19 @@
+{
+  "name": "test-auto-publish-github-action",
+  "version": "1.0.0",
+  "description": "just a test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KyleAMathews/test-auto-publish-github-action.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KyleAMathews/test-auto-publish-github-action/issues"
+  },
+  "homepage": "https://github.com/KyleAMathews/test-auto-publish-github-action#readme"
+}
