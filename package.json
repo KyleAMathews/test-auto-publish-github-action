@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/KyleAMathews/test-auto-publish-github-action/issues"
   },
-  "homepage": "https://github.com/KyleAMathews/test-auto-publish-github-action#readme"
+  "homepage": "https://github.com/KyleAMathews/test-auto-publish-github-action#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
