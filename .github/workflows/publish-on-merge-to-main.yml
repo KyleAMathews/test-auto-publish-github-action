@@ -20,7 +20,7 @@ jobs:
           git config --global user.email 'github-action@users.noreply.github.com'
       - name: Bump patch version
         run: npm version patch
-      - run: npm publish
+      - run: npm publish --tag=test-tag
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Push back release
