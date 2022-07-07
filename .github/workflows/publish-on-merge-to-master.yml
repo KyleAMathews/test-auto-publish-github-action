@@ -1,0 +1,28 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
+      - run: yarn install
+      # - run: yarn test
+      - name: Bump patch version
+        run: npm version patch
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Push back release
+        run: |
+          git config --global user.name 'Github Action'
+          git config --global user.email 'github-action@users.noreply.github.com'
+          git push
+          git push --tags
