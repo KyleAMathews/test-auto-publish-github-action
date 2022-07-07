@@ -14,7 +14,10 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           cache: 'yarn'
       - run: yarn install
-      # - run: yarn test
+      - name: Setup git
+        run: |
+          git config --global user.name 'Github Action'
+          git config --global user.email 'github-action@users.noreply.github.com'
       - name: Bump patch version
         run: npm version patch
       - run: npm publish
@@ -22,7 +25,5 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Push back release
         run: |
-          git config --global user.name 'Github Action'
-          git config --global user.email 'github-action@users.noreply.github.com'
           git push
           git push --tags
