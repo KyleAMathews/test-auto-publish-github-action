@@ -1,6 +1,6 @@
 {
   "name": "test-auto-publish-github-action",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "just a test",
   "main": "index.js",
   "scripts": {
